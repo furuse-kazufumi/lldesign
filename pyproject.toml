@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling>=1.18"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llmesh-lldesign"
+version = "0.0.1"
+description = "Design tooling for the FullSense LLM family — UI / Web / diagram design via LLM-friendly DSLs"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.11,<3.12"
+authors = [{name = "Kazufumi Furuse", email = "kazufumi@furuse.work"}]
+keywords = [
+  "fullsense", "llmesh", "llive", "llove",
+  "design", "llm", "mermaid", "svg", "excalidraw",
+  "storybook", "a11y", "design-system",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3.11",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Documentation",
+  "Topic :: Multimedia :: Graphics :: Editors :: Vector-Based",
+]
+dependencies = []
+
+[project.optional-dependencies]
+llive = ["llmesh-llive>=0.6"]
+llove = ["llmesh-llove>=0.2"]
+dev = ["pytest>=7", "pytest-cov", "ruff", "mypy"]
+
+[project.urls]
+Homepage   = "https://furuse-kazufumi.github.io/lldesign/"
+Source     = "https://github.com/furuse-kazufumi/lldesign"
+Tracker    = "https://github.com/furuse-kazufumi/lldesign/issues"
+FullSense  = "https://furuse-kazufumi.github.io/fullsense/"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lldesign"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra -q"
