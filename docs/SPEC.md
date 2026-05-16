@@ -77,6 +77,28 @@ tokens = session.extract_tokens(figma_export_json)
 | Pluggable LLM backend | no | no | no | n/a | **yes** (llmesh) |
 | Mermaid native | no | partial | no | no | **yes** |
 
+### vs. generic coding agents (Claude Code / Codex CLI / Gemini CLI)
+
+| Capability | Claude Code | Codex CLI | Gemini CLI | **lldesign** |
+|---|---|---|---|---|
+| General code editing | A (SOTA) | A | A− | not the goal |
+| **Domain-aware design output** | C (generic) | C | C | **A** (Mermaid/SVG/Excalidraw/Storybook native) |
+| **a11y validation built-in** | no | no | no | **yes** (axe-core) |
+| **Design DNA memory** (PM axis) | no | no | no | **yes** (via llive) |
+| **On-prem inference** | no (cloud) | no (cloud) | no (cloud) | **yes** (Ollama) |
+| **End-to-end OSS** (incl. backend) | no | CLI only | CLI only | **yes** |
+| HITL TUI (vs CLI approval) | no | CLI prompt | CLI prompt | **yes** (llove) |
+| Audit Ledger | no | no | no | **yes** (SQLite, via llive) |
+
+**Positioning**: generic coding agents win on raw code edit precision; lldesign
+wins on **domain-aware design specifics** (a11y, design tokens, design system
+inheritance) and **operational deployability** (on-prem, OSS, audit). Use
+lldesign when the design output needs to be reviewed, audited, and re-used
+across teams; use Claude Code / Codex / Gemini when you just need ad-hoc
+diagrams that don't need to fit into a design system.
+
+See the umbrella comparison: [FullSense Comparison](https://furuse-kazufumi.github.io/fullsense/comparison.html).
+
 ## Versioning
 
 - v0.0.x — alpha skeleton (this revision)
