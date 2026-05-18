@@ -37,6 +37,20 @@ pip install "llmesh-lldesign[llive]"  # with llive integration
 - [llive](https://github.com/furuse-kazufumi/llive) — self-evolving memory + execution kernel
 - [llove](https://github.com/furuse-kazufumi/llove) — TUI dashboard / HITL workbench
 
+## Portal hubs (drift 防止)
+
+具体的な install snippet / 推奨モデル / ベンチ運用ルール / Spec は
+**FullSense portal の hub ページ** が真実ソース。lldesign は薄く参照する:
+
+- [Recommended on-prem models](https://furuse-kazufumi.github.io/fullsense/recommended-models/) —
+  `qwen2.5-coder:7b` 等の推奨、`llama3.2:3b` 非推奨の根拠
+- [Spec hub](https://furuse-kazufumi.github.io/fullsense/spec/) —
+  FullSense Eternal Spec v1.1 章直リンク
+- [Benchmark Policy](https://furuse-kazufumi.github.io/fullsense/benchmarks/policy/) —
+  系列 A/B/C/D + xs/s/m/l/xl progressive curve + honest disclosure
+- [Comparison](https://furuse-kazufumi.github.io/fullsense/comparison) —
+  vs Claude Code / Perplexity / Codex / Gemini (honest disclosure 付き)
+
 ## License
 
 Code: **Apache-2.0**. Commercial license available — see [LICENSE-COMMERCIAL](https://github.com/furuse-kazufumi/llive/blob/main/LICENSE-COMMERCIAL).
