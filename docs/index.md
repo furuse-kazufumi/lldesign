@@ -48,6 +48,15 @@ pip install "llmesh-lldesign[llive]"  # with llive integration
 
 See the full comparison: [FullSense Comparison](https://furuse-kazufumi.github.io/fullsense/comparison.html).
 
+## FullSense Portal hubs (真実ソース)
+
+具体的な install snippet / 推奨モデル / Spec の **真実ソース** は portal:
+
+- [Recommended models](https://furuse-kazufumi.github.io/fullsense/recommended-models/) — `qwen2.5-coder:7b` 推奨、`llama3.2:3b` 非推奨の根拠
+- [Spec hub](https://furuse-kazufumi.github.io/fullsense/spec/) — FullSense Eternal Spec v1.1
+- [Benchmark Policy](https://furuse-kazufumi.github.io/fullsense/benchmarks/policy/)
+- [Cognitive Mesh](https://furuse-kazufumi.github.io/fullsense/cognitive-mesh/) — llive v0.8 cognitive mesh の概観
+
 ## Links
 
 - [GitHub repo](https://github.com/furuse-kazufumi/lldesign)
